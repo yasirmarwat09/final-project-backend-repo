@@ -359,7 +359,11 @@ app.post("/api/messages", async (req, res) => {
     res.status(500).json({ error: "Failed to save message" });
   }
 });
+app.get('/*', (req , res) => {
+        res.status(200).json(message : "connection successful);
+});
 
 app.listen(process.env.PORT, () =>
   console.log(`Server running on http://localhost:${process.env.PORT}`)
 );
+export default app;
